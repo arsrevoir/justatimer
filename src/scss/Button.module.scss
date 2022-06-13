@@ -1,0 +1,14 @@
+@use 'vars';
+@use 'mixins';
+
+.button {
+  padding: .3em 1em;
+  @include mixins.box;
+  @include mixins.shadow-box;
+  transition: color .2s, background-color .2s;
+  cursor: pointer;
+
+  span {
+    font-weight: 600;
+  }
+}

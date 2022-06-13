@@ -1,0 +1,19 @@
+@use 'vars';
+@use 'mixins';
+
+.containerWrapper {
+  width: 724px;
+  padding: 1em;
+  margin: 0 auto;
+  
+  .container {
+    
+    .contentWrapper {
+      margin-top: 4em;
+
+      .content {
+        @include mixins.flex-column;
+      }
+    }
+  }
+}

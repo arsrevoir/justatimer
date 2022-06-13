@@ -1,0 +1,10 @@
+@use 'mixins';
+
+.containerWrapper {
+
+  .container {
+    @include mixins.flex-row;
+    gap: .6em;
+    font-size: 2.1rem;
+  }
+}

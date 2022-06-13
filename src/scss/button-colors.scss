@@ -1,0 +1,28 @@
+@use 'vars';
+
+.gray {
+  color: vars.$grayLight;
+  background-color: vars.$grayContainerBackground;
+  &:hover {
+    color: #B1BAD9;
+    background-color: #E4EDFF;
+  }
+}
+
+.green {
+  color: vars.$greenLight;
+  background-color: vars.$greenContainerBackground;
+  &:hover {
+    color: #B1DABD;
+    background-color: #DCF9E1;
+  }
+}
+
+.red {
+  color: vars.$redLight;
+  background-color: vars.$redContainerBackground;
+  &:hover {
+    color: #C78686;
+    background-color: #F6D0D0;
+  }  
+}

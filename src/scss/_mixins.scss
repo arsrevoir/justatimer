@@ -1,0 +1,24 @@
+@use 'vars';
+
+@mixin sans {
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin shadow-box {
+  box-shadow: 2px 4px 5px 0 rgba(196, 195, 218, .1);
+}
+
+@mixin box {
+  border-radius: .2em;
+}

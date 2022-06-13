@@ -1,0 +1,10 @@
+@use 'mixins';
+
+.containerWrapper {
+  
+  .container {
+    @include mixins.flex-column;
+    align-items: center;
+    gap: .3em;
+  }
+}
