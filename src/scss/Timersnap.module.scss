@@ -1,0 +1,26 @@
+@use 'vars';
+@use 'mixins';
+
+
+.container {
+  @include mixins.flex-row;
+  align-items: flex-end;
+  gap: .4em;
+
+  .timersnap {
+    font-size: 3.2rem;
+    font-weight: 700;
+  }
+
+  .action {
+    font-size: 2.4rem;
+    font-weight: 500;
+    padding-bottom: .1em;
+  }
+
+  .timestamp {
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding-bottom: .05em;
+  }
+}

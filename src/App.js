@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import TimelineContext from './contexts/TimelineContext'
 import Timer from './components/Timer'
 import Timeline from './components/Timeline'
 import styles from './scss/App.module.scss'
@@ -11,8 +12,10 @@ const App = () => {
       <div className={styles.container}>
         <div className={styles.contentWrapper}>
           <div className={styles.content}>
-            <Timer />
-            <Timeline />
+            <TimelineContext.Provider value={[timeline, setTimeline]}>
+              <Timer />
+              <Timeline />
+            </TimelineContext.Provider>
           </div>
         </div>
       </div>

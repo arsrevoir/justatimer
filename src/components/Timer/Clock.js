@@ -2,6 +2,7 @@ import { useState, useEffect, useContext } from 'react'
 import TimeContext from '../../contexts/TimeContext'
 import StatusContext from '../../contexts/StatusContext'
 import styles from '../../scss/Clock.module.scss'
+import { parseTime } from '../../lib/lib'
 
 const Clock = () => {
   const [time, setTime] = useContext(TimeContext)
@@ -35,15 +36,7 @@ const Clock = () => {
   useEffect(() => {
     if(status === 0) setTime([0,0,0])
   }, [status])
-
-  let parseTime = (time) => {
-    return [
-      time[0], 
-      time[1] < 10 ? `0${time[1]}` : time[1], 
-      time[2] < 10 ? `0${time[2]}` : time[2]
-    ].join(':')
-  }
-
+  
   return(
     <div className={styles.container}>
       <span className={styles.time}>{parseTime(time)}</span>

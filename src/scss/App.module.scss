@@ -13,6 +13,7 @@
 
       .content {
         @include mixins.flex-column;
+        gap: 1em;
       }
     }
   }

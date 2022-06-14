@@ -1,0 +1,15 @@
+@use 'vars';
+@use 'mixins';
+
+.containerWrapper {
+  @include mixins.box;
+  @include mixins.flex-row;
+  padding: 1em 2em;
+  background-color: vars.$grayContainerBackground;
+  justify-content: center;
+
+  .container {
+    @include mixins.flex-column;
+    gap: .3em;
+  }
+}

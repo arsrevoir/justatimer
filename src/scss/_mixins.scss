@@ -15,10 +15,7 @@
   flex-direction: column;
 }
 
-@mixin shadow-box {
-  box-shadow: 2px 4px 5px 0 rgba(196, 195, 218, .1);
-}
-
 @mixin box {
-  border-radius: .2em;
+  box-shadow: 2px 4px 5px 0 rgba(196, 195, 218, .1);
+  border-radius: .4em;
 }
