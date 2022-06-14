@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import TimeContext from '../contexts/TimeContext'
 import StatusContext from '../contexts/StatusContext'
 import Clock from './Timer/Clock'
@@ -8,9 +8,22 @@ import styles from '../scss/Timer.module.scss'
 const Timer = () => {
   const [time, setTime] = useState([0, 0, 0])
   const [status, setStatus] = useState(0)
+  const didMount = useRef(false)
+
+  useEffect(() => {
+    setStatus(JSON.parse(localStorage.getItem('status')))
+    setTime(JSON.parse(localStorage.getItem('time')))
+  }, [])
+
+  useEffect(() => {
+    if(didMount.current) {
+      localStorage.setItem('status', status)
+      localStorage.setItem('time', JSON.stringify(time))
+    }
+  }, [status, time])
 
   return(
-    <div className={styles.containerWrapper}>
+    <div ref={didMount} className={styles.containerWrapper}>
       <div className={styles.container}>
         <TimeContext.Provider value={[time, setTime]}>
           <StatusContext.Provider value={[status, setStatus]}>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import TimeContext from '../../contexts/TimeContext'
 import StatusContext from '../../contexts/StatusContext'
 import styles from '../../scss/Clock.module.scss'
@@ -36,7 +36,7 @@ const Clock = () => {
   useEffect(() => {
     if(status === 0) setTime([0,0,0])
   }, [status])
-  
+
   return(
     <div className={styles.container}>
       <span className={styles.time}>{parseTime(time)}</span>

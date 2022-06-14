@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import { useContext } from 'react'
 import TimeContext from '../../contexts/TimeContext'
 import StatusContext from '../../contexts/StatusContext'
 import TimelineContext from '../../contexts/TimelineContext'

@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react'
+import {useContext } from 'react'
 import TimelineContext from '../contexts/TimelineContext'
 import Timersnap from './Timeline/Timersnap'
 import styles from '../scss/Timeline.module.scss'
