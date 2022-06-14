@@ -11,8 +11,11 @@ const Timer = () => {
   const didMount = useRef(false)
 
   useEffect(() => {
-    setStatus(JSON.parse(localStorage.getItem('status')))
-    setTime(JSON.parse(localStorage.getItem('time')))
+    let lcStatus = localStorage.getItem('status')
+    let lcTime = localStorage.getItem('time')
+
+    if(lcStatus) setStatus(JSON.parse(lcStatus))
+    if(lcTime) setTime(JSON.parse(lcTime))
   }, [])
 
   useEffect(() => {

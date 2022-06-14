@@ -9,7 +9,9 @@ const App = () => {
   const didMount = useRef(false)
 
   useEffect(() => {
-    setTimeline(JSON.parse(localStorage.getItem('timeline')))
+    let lcTimeline = localStorage.getItem('timeline')
+
+    if(lcTimeline) setTimeline(JSON.parse(lcTimeline))
   }, [])
 
   useEffect(() => {
